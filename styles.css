@@ -1,60 +1,63 @@
-body {
-    font-family: sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    background-color: #f0f0f0;
-}
+ #div1 {
+            background-image: url("https://picsum.photos/id/237/200/300");
+            height: 300px;
+            width: 200px;
+            margin: 20px;
+        }
 
-.container {
-    display: grid;
-    grid-template-columns: repeat(3, 150px);
-    grid-template-rows: repeat(2, 150px);
-    gap: 10px;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    border-radius: 10px;
-}
+        #div2 {
+            background-image: url("https://picsum.photos/seed/picsum/200/300");
+            height: 300px;
+            width: 200px;
+            margin: 20px;
+        }
 
-.draggable-item {
-    width: 150px;
-    height: 150px;
-    background-size: cover;
-    background-position: center;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    cursor: grab;
-    transition: transform 0.2s ease-in-out;
-}
+        #div3 {
+            background-image: url("https://picsum.photos/200/300?grayscale");
+            height: 300px;
+            width: 200px;
+            margin: 20px;
+        }
 
-.draggable-item:active {
-    cursor: grabbing;
-}
+        #div4 {
+            background-image: url("https://picsum.photos/200/300/");
+            height: 300px;
+            width: 200px;
+            margin: 20px;
+        }
 
-/* Assign unique background images to each div */
-#div1 {
-    background-image: url('https://picsum.photos/id/1018/150/150');
-}
+        #div5 {
+            background-image: url("https://picsum.photos/200/300.jpg");
+            height: 300px;
+            width: 200px;
+            margin: 20px;
+        }
 
-#div2 {
-    background-image: url('https://picsum.photos/id/1015/150/150');
-}
+        #div6 {
+            background-image: url("https://picsum.photos/id/102/200/300");
+            height: 300px;
+            width: 200px;
+            margin: 20px;
+        }
 
-#div3 {
-    background-image: url('https://picsum.photos/id/1016/150/150');
-}
+        div.container {
+            border: 5px solid #555;
+        }
 
-#div4 {
-    background-image: url('https://picsum.photos/id/1025/150/150');
-}
+        .flex {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-#div5 {
-    background-image: url('https://picsum.photos/id/1024/150/150');
-}
+        .selected {
+            border: 5px solid rgb(0, 195, 255);
+        }
 
-#div6 {
-    background-image: url('https://picsum.photos/id/1035/150/150');
-}
+        p {
+            text-align: center;
+        }
+
+        button {
+            margin: 20px;
+        }
