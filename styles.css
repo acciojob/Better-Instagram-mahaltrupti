@@ -1,63 +1,84 @@
- #div1 {
-            background-image: url("https://picsum.photos/id/237/200/300");
-            height: 300px;
-            width: 200px;
-            margin: 20px;
-        }
+ body{
+	margin:0;
+	padding:0;
+	height:100vh;
+	width:100vw;
+}
+.flex{
+    height: 100%;
+    width: 100%;
+}
+.div{
+      height: 60%;
+      width: 20%;
+	 position: relative;
+}
 
-        #div2 {
-            background-image: url("https://picsum.photos/seed/picsum/200/300");
-            height: 300px;
-            width: 200px;
-            margin: 20px;
-        }
+#div1 {
+  background-image: url("https://picsum.photos/id/237/200/300");
+  height: 300px;
+  width: 200px;
+  margin: 20px;
+}
 
-        #div3 {
-            background-image: url("https://picsum.photos/200/300?grayscale");
-            height: 300px;
-            width: 200px;
-            margin: 20px;
-        }
+#div2 {
+  background-image: url("https://picsum.photos/seed/picsum/200/300");
+  height: 300px;
+  width: 200px;
+  margin: 20px;
+}
 
-        #div4 {
-            background-image: url("https://picsum.photos/200/300/");
-            height: 300px;
-            width: 200px;
-            margin: 20px;
-        }
+#div3 {
+  background-image: url("https://picsum.photos/200/300?grayscale");
+  height: 300px;
+  width: 200px;
+  margin: 20px;
+}
 
-        #div5 {
-            background-image: url("https://picsum.photos/200/300.jpg");
-            height: 300px;
-            width: 200px;
-            margin: 20px;
-        }
+#div4 {
+  background-image: url("https://picsum.photos/200/300/");
+  height: 300px;
+  width: 200px;
+  margin: 20px;
+}
 
-        #div6 {
-            background-image: url("https://picsum.photos/id/102/200/300");
-            height: 300px;
-            width: 200px;
-            margin: 20px;
-        }
+#div5 {
+  background-image: url("https://picsum.photos/200/300.jpg");
+  height: 300px;
+  width: 200px;
+  margin: 20px;
+}
 
-        div.container {
-            border: 5px solid #555;
-        }
+#div6 {
+  background-image: url("https://picsum.photos/id/102/200/300");
+  height: 300px;
+  width: 200px;
+  margin: 20px;
+}
 
-        .flex {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+div.container {
+  border: 5px solid #555;
+}
 
-        .selected {
-            border: 5px solid rgb(0, 195, 255);
-        }
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:10px;
+}
 
-        p {
-            text-align: center;
-        }
+.selected {
+  border: 5px solid rgb(0, 195, 255);
+}
 
-        button {
-            margin: 20px;
-        }
+p {
+  text-align: center;
+	position: absolute;
+            top: -4%;
+            left: 5%;
+}
+
+button {
+  margin: 20px;
+}
+

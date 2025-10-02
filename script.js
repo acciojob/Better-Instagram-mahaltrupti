@@ -1,39 +1,50 @@
-//your code here
-document.addEventListener('DOMContentLoaded', () => {
-    const draggableItems = document.querySelectorAll('.draggable-item');
-    let draggedItem = null;
+ const allBoxes = document.querySelectorAll(".div");
 
-    draggableItems.forEach(item => {
-        // Event for when dragging begins
-        item.addEventListener('dragstart', (e) => {
-            draggedItem = e.target;
-            setTimeout(() => {
-                e.target.style.opacity = '0.5';
-            }, 0);
-        });
 
-        // Event for when a draggable item is over a droppable area
-        item.addEventListener('dragover', (e) => {
-            e.preventDefault(); // Prevents default behavior to allow a drop
-        });
+        for (let i = 0; i < allBoxes.length; i++) {
+            allBoxes[i].addEventListener("dragstart", (e) => {
+                //console.log("dragstart",e)
+                e.dataTransfer.setData("text", e.currentTarget.id);
+            })
+            allBoxes[i].addEventListener("dragover", (e) => {
+                e.preventDefault();
+            })
+            allBoxes[i].addEventListener("drop", (e) => {
+                //e.preventDefault();
+                const dragEleId = e.dataTransfer.getData("text");
 
-        // Event for when a draggable item is dropped
-        item.addEventListener('drop', (e) => {
-            e.preventDefault();
-            if (e.target.classList.contains('draggable-item') && e.target !== draggedItem) {
-                const targetItem = e.target;
-                const tempBackground = draggedItem.style.backgroundImage;
+                const dragEle = document.getElementById(dragEleId);
+
+                console.log(dragEle,dragEleId,'drag ele')
+
+
+                const dropEle = e.currentTarget;
+
+				console.log(dropEle);
+
+                const dragImg = dragEle.querySelector("img");
+                const dropImg = dropEle.querySelector("img");
+
+				// Swap innerHTML
+			    const tempHTML = dragEle.innerHTML;
+			    dragEle.innerHTML = dropEle.innerHTML;
+			    dropEle.innerHTML = tempHTML;
+
+				//or
                 
-                // Swap the background images
-                draggedItem.style.backgroundImage = targetItem.style.backgroundImage;
-                targetItem.style.backgroundImage = tempBackground;
-            }
-        });
+   /*
+				// swap image src
+				const tempSrc = dragImg.src;
+                dragImg.src = dropImg.src;
+                dropImg.src = tempSrc;
 
-        // Event for when dragging ends
-        item.addEventListener('dragend', (e) => {
-            e.target.style.opacity = '1';
-            draggedItem = null;
-        });
-    });
-});
+                // get <p> inside both divs
+                const dragText = dragEle.querySelector("p");
+                const dropText = dropEle.querySelector("p");
+
+                // swap text
+                const tempText = dragText.innerText;
+                dragText.innerText = dropText.innerText;
+                dropText.innerText = tempText;*/
+            })
+        }
